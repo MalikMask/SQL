@@ -1,0 +1,25 @@
+--Create a game store database
+
+CREATE TABLE Gamestop (id INTEGER PRIMARY KEY, name TEXT, price INTEGER, inventory INTEGER, consel TEXT);
+
+INSERT INTO Gamestop VALUES (1, "Horizon: Zero Dawn", 50, 200, "PS4");
+INSERT INTO Gamestop VALUES (2, "Hit man 1", 15, 857, "PS2");
+INSERT INTO Gamestop VALUES (3, "Hitman 2", 30, 740, "PS3");
+INSERT INTO Gamestop VALUES (4, "Hitman 3", 60, 200, "PS5");
+INSERT INTO Gamestop VALUES (5, "MarioKart Double Dash", 12, 200, "Gamecube");
+INSERT INTO Gamestop VALUES (6, "Horizon Forbidden West", 60, 300, "PS5");
+INSERT INTO Gamestop VALUES (7, "Chicken Fight", 22, 69, "PC");
+INSERT INTO Gamestop VALUES (8, "Overwatch", 35, 76, "PC");
+INSERT INTO Gamestop VALUES (9, "Overwatch 2", 60, 776, "PS5");
+INSERT INTO Gamestop VALUES (10, "Moving Out", 20, 443, "ALL");
+INSERT INTO Gamestop VALUES (11, "Sims 1-4 Pack", 220, 330, "PC");
+INSERT INTO Gamestop VALUES (12, "Plants vs Monsters", 5, 999, "Mobile");
+INSERT INTO Gamestop VALUES (13, "Cookie Kingdom", 5, 999, "Mobile");
+INSERT INTO Gamestop VALUES (14, "Rocket League", 45, 19, "PC");
+INSERT INTO Gamestop VALUES (15, "DJ Hero", 25, 4, "Wii");
+
+--Display the database ordered by price
+SELECT * FROM Gamestop ORDER BY price desc;
+
+--What is the total inventory of PC games?
+SELECT concel, SUM(inventory) FROM gamestop WHERE consel="PC";
