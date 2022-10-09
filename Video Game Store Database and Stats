@@ -1,6 +1,6 @@
 --Create a game store database
 
-CREATE TABLE Gamestop (id INTEGER PRIMARY KEY, name TEXT, price INTEGER, inventory INTEGER, consel TEXT);
+CREATE TABLE Gamestop (id INTEGER PRIMARY KEY, name TEXT, price INTEGER, inventory INTEGER, console TEXT);
 
 INSERT INTO Gamestop VALUES (1, "Horizon: Zero Dawn", 50, 200, "PS4");
 INSERT INTO Gamestop VALUES (2, "Hit man 1", 15, 857, "PS2");
@@ -22,4 +22,4 @@ INSERT INTO Gamestop VALUES (15, "DJ Hero", 25, 4, "Wii");
 SELECT * FROM Gamestop ORDER BY price desc;
 
 --What is the total inventory of PC games?
-SELECT concel, SUM(inventory) FROM gamestop WHERE consel="PC";
+SELECT console, SUM(inventory) FROM gamestop WHERE console="PC";
